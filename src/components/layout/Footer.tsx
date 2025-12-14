@@ -39,8 +39,17 @@ const Footer = () => {
               <a href="mailto:hello@botanicalthreads.com" className="hover:text-primary transition-colors">
                 hello@botanicalthreads.com
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://instagram.com/botanicalthreads" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 Instagram
+              </a>
+              <a href="https://facebook.com/botanicalthreads" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Facebook
+              </a>
+              <a href="https://tiktok.com/@botanicalthreads" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                TikTok
+              </a>
+              <a href="https://youtube.com/@botanicalthreads" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                YouTube
               </a>
             </div>
           </div>
