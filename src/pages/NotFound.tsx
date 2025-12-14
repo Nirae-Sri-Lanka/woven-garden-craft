@@ -1,23 +1,30 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Layout from "@/components/layout/Layout";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
-      </div>
-    </div>
+    <Layout>
+      <section className="min-h-[60vh] flex items-center justify-center section-padding">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <p className="text-8xl font-display text-primary/20 mb-4">404</p>
+          <h1 className="heading-section mb-6">Page Not Found</h1>
+          <p className="text-elegant text-muted-foreground mb-10 max-w-md mx-auto">
+            The page you're looking for seems to have wandered off into the forest. 
+            Let's get you back on track.
+          </p>
+          <Button variant="botanical" size="lg" asChild>
+            <Link to="/">Return Home</Link>
+          </Button>
+        </motion.div>
+      </section>
+    </Layout>
   );
 };
 
