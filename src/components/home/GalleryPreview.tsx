@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import galleryKimono from "@/assets/gallery-kimono.jpg";
 import galleryScarf from "@/assets/gallery-scarf.jpg";
 import galleryDress from "@/assets/gallery-dress.jpg";
+import fabricStack from "@/assets/fabric-stack.jpg";
 
 const pieces = [
   { image: galleryKimono, title: "Botanical Kimono", category: "Outerwear" },
   { image: galleryScarf, title: "Eucalyptus Scarf", category: "Accessories" },
   { image: galleryDress, title: "Garden Dress", category: "Dresses" },
+  { image: fabricStack, title: "Layered Textures", category: "Collection" },
 ];
 
 const GalleryPreview = () => {
@@ -20,20 +22,26 @@ const GalleryPreview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16"
         >
-          <p className="text-caption text-primary mb-4">Collection</p>
-          <h2 className="heading-section">Wearable Nature</h2>
+          <div>
+            <p className="text-caption text-primary mb-4">Collection</p>
+            <h2 className="heading-section">Wearable Nature</h2>
+          </div>
+          <p className="text-elegant text-muted-foreground max-w-md">
+            Each collection is a chapter, not a season. Our designs are developed slowly and 
+            intentionally, guided by concept, material, and craft rather than trends.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
           {pieces.map((piece, index) => (
             <motion.div
               key={piece.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group cursor-pointer"
             >
               <div className="aspect-[3/4] overflow-hidden mb-4 relative">

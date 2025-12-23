@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
-import processGathering from "@/assets/process-gathering.jpg";
-import processBundling from "@/assets/process-bundling.jpg";
-import processReveal from "@/assets/process-reveal.jpg";
-import processSewing from "@/assets/process-sewing.jpg";
-import colorOutcomes from "@/assets/color-outcomes.jpg";
+import fabricMordant from "@/assets/fabric-mordant.jpg";
+import fabricDyeing from "@/assets/fabric-dyeing.jpg";
+import fabricDelicate from "@/assets/fabric-delicate.jpg";
+import fabricStack from "@/assets/fabric-stack.jpg";
+import fabricSamples from "@/assets/fabric-samples.jpg";
 
 const processSteps = [
   {
     number: "01",
-    title: "Gathering from Nature",
-    description: "Each piece begins with a walk through gardens and forests. I collect eucalyptus leaves, fern fronds, rose petals, and other botanicals—each chosen for their unique ability to transfer color and pattern onto fabric.",
-    image: processGathering,
-    details: ["Seasonal foraging", "Local & sustainable sources", "Each leaf hand-selected"]
+    title: "Preparing the Fabric",
+    description: "The journey begins with careful preparation. Each fabric is scoured and mordanted — a process using natural fixatives like alum or iron that helps the fabric accept and hold the plant dyes permanently.",
+    image: fabricMordant,
+    details: ["Natural mordants only", "Hours of soaking time", "Each fabric type treated differently"]
   },
   {
     number: "02", 
-    title: "Preparing & Bundling",
-    description: "The fabric is first mordanted—a process that helps it accept the plant dyes. Then comes the meditative work of laying each leaf and flower exactly where I want the print to appear, before bundling everything tightly.",
-    image: processBundling,
-    details: ["Natural mordants only", "Intuitive leaf placement", "Tightly rolled bundles"]
+    title: "Creating Natural Colour",
+    description: "We extract colour directly from plants, roots, leaves, flowers, and bark. Each dye bath is carefully prepared, with temperatures and timing adjusted to achieve the perfect shade. This slow method creates colours that feel alive.",
+    image: fabricDyeing,
+    details: ["Plant-based dyes only", "Temperature controlled", "Multiple dye baths for depth"]
   },
   {
     number: "03",
-    title: "The Reveal",
-    description: "After hours of steaming, comes the magic moment—unwrapping each bundle to discover what nature has created. Every piece is a surprise, with colors and patterns I could never fully predict.",
-    image: processReveal,
-    details: ["Steam for 2-4 hours", "Each result unique", "Nature's own palette"]
+    title: "The Dyeing Process",
+    description: "The fabric is immersed in the natural dye bath. The material must soak, absorb, rest, and react. Different plants yield different colours — soft tones, gentle variations, and natural warmth that synthetic dyes cannot imitate.",
+    image: fabricDelicate,
+    details: ["Slow absorption process", "Natural colour development", "Each result unique"]
   },
   {
     number: "04",
     title: "Crafting the Garment",
-    description: "With the printed fabric now dry and cured, I cut and sew each garment by hand. Every stitch is intentional, creating wearable art that honors both the fabric and the plants that colored it.",
-    image: processSewing,
+    description: "With the dyed fabric now cured and ready, we cut and sew each garment by hand. Every stitch is intentional, creating wearable art that honours both the fabric and the plants that coloured it.",
+    image: fabricStack,
     details: ["Hand-cut patterns", "Artisan stitching", "One-of-a-kind pieces"]
   }
 ];
@@ -51,12 +51,14 @@ const Process = () => {
           >
             <p className="text-caption text-primary mb-4">The Craft</p>
             <h1 className="heading-hero mb-8">
-              My <span className="italic">Process</span>
+              Our <span className="italic">Process</span>
             </h1>
-            <p className="text-elegant text-muted-foreground">
-              Creating each piece is a slow, intentional journey from nature to garment. 
-              There's no rushing eco-printing—it unfolds on its own timeline, 
-              guided by the plants and the seasons.
+            <p className="text-elegant text-muted-foreground mb-6">
+              Natural dyeing is a slow method. There's no rushing this art — it unfolds 
+              on its own timeline, guided by the plants and the seasons.
+            </p>
+            <p className="text-lg font-display italic text-primary/80">
+              This slow process is our signature. It is what makes Niraé different.
             </p>
           </motion.div>
         </div>
@@ -125,8 +127,8 @@ const Process = () => {
             >
               <div className="aspect-square overflow-hidden">
                 <img
-                  src={colorOutcomes}
-                  alt="Various natural dye color outcomes"
+                  src={fabricSamples}
+                  alt="Various natural dye color samples showing seasonal variations"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -139,29 +141,32 @@ const Process = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-caption text-primary mb-4">The Palette</p>
-              <h2 className="heading-section mb-6">Nature's Colors</h2>
-              <p className="text-elegant text-muted-foreground mb-8">
-                Different plants yield different colors—eucalyptus gives terracotta and rust, 
-                while oak leaves produce soft grays and blues. The same plant can even create 
-                different hues depending on the season, the soil, and the mordant used.
+              <h2 className="heading-section mb-6">Nature's Colours</h2>
+              <p className="text-elegant text-muted-foreground mb-6">
+                The plant material changes with the seasons. The temperature of the water 
+                shifts the shade. The sunlight, the timing, the hand movements — everything 
+                creates small differences.
+              </p>
+              <p className="text-lg font-display italic text-foreground mb-8">
+                These variations are not flaws. They are the identity of the garment.
               </p>
               
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <div className="w-full h-3 bg-terracotta mb-2 rounded-full" />
-                  <p className="text-sm font-body text-muted-foreground">Eucalyptus</p>
+                  <p className="text-sm font-body text-muted-foreground">Madder Root</p>
                 </div>
                 <div>
                   <div className="w-full h-3 bg-sage mb-2 rounded-full" />
-                  <p className="text-sm font-body text-muted-foreground">Fern</p>
+                  <p className="text-sm font-body text-muted-foreground">Indigo Leaves</p>
                 </div>
                 <div>
                   <div className="w-full h-3 bg-rust mb-2 rounded-full" />
-                  <p className="text-sm font-body text-muted-foreground">Oak</p>
+                  <p className="text-sm font-body text-muted-foreground">Iron Mordant</p>
                 </div>
                 <div>
                   <div className="w-full h-3 bg-ochre mb-2 rounded-full" />
-                  <p className="text-sm font-body text-muted-foreground">Onion Skin</p>
+                  <p className="text-sm font-body text-muted-foreground">Turmeric</p>
                 </div>
               </div>
             </motion.div>
