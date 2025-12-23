@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import processBundling from "@/assets/process-bundling.jpg";
+import fabricDelicate from "@/assets/fabric-delicate.jpg";
+import fabricStack from "@/assets/fabric-stack.jpg";
 
 const About = () => {
   return (
@@ -16,13 +17,18 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-caption text-primary mb-4">About</p>
+              <p className="text-caption text-primary mb-4">About Us</p>
               <h1 className="heading-hero mb-8">
-                The <span className="italic">Artisan</span>
+                <span className="italic">Niraé</span>
               </h1>
+              <p className="text-elegant text-muted-foreground mb-6">
+                Niraé is a handmade clothing brand built on slow craft, natural dye, 
+                and mindful creation.
+              </p>
               <p className="text-elegant text-muted-foreground">
-                Behind every botanical print is a story of patience, discovery, 
-                and a deep love for the natural world.
+                Every piece begins with fabric, plants, and the patience required to 
+                let nature shape colour. We believe clothing should carry meaning, 
+                not just trends.
               </p>
             </motion.div>
 
@@ -33,8 +39,8 @@ const About = () => {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={processBundling}
-                  alt="Artisan at work with botanical dyes"
+                  src={fabricDelicate}
+                  alt="Delicate naturally dyed fabrics by Niraé"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -54,28 +60,23 @@ const About = () => {
             className="space-y-8 text-elegant text-muted-foreground"
           >
             <p className="text-foreground text-2xl md:text-3xl font-display font-light leading-relaxed">
-              I discovered eco-printing by accident—a forgotten bundle of fabric and leaves 
-              left in my garden one rainy afternoon became the first piece I ever created.
+              We choose methods that respect the earth and honour traditional dyeing techniques.
             </p>
 
             <p>
-              What started as curiosity quickly became an obsession. I spent years studying 
-              the ancient art of natural dyeing, learning which plants yield which colors, 
-              how the seasons affect the hues, and how to coax the most vibrant prints from 
-              leaves and flowers.
+              Our work is small-scale and intentional. Each garment is touched by human hands 
+              from start to finish — preparing the fabric, creating colour from plants, dyeing, 
+              washing, and stitching. This slow process is our signature.
             </p>
 
             <p>
-              Today, I create one-of-a-kind garments that honor both traditional textile arts 
-              and sustainable fashion. Each piece is a collaboration between my hands and 
-              nature's infinite creativity—I may guide the process, but it's the plants that 
-              create the final artwork.
+              It is what makes Niraé different: honest, handcrafted, and naturally beautiful.
             </p>
 
             <p>
-              My studio is filled with bundles of dried leaves, jars of natural mordants, 
-              and fabric waiting to be transformed. Every season brings new possibilities 
-              as different plants come into their prime.
+              We create for people who appreciate individuality, sustainability, and the quiet 
+              elegance of natural colour. Niraé is not just clothing — it is a reminder that 
+              artistry still exists in the details.
             </p>
           </motion.div>
 
@@ -89,23 +90,76 @@ const About = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
           >
             <div className="text-center">
-              <p className="text-4xl font-display text-primary mb-2">7+</p>
-              <p className="text-caption text-muted-foreground">Years Crafting</p>
+              <p className="text-4xl font-display text-primary mb-2">Hand</p>
+              <p className="text-caption text-muted-foreground">Crafted</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl font-display text-primary mb-2">200+</p>
-              <p className="text-caption text-muted-foreground">Pieces Created</p>
+              <p className="text-4xl font-display text-primary mb-2">Plant</p>
+              <p className="text-caption text-muted-foreground">Based Dyes</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl font-display text-primary mb-2">50+</p>
-              <p className="text-caption text-muted-foreground">Plant Varieties</p>
+              <p className="text-4xl font-display text-primary mb-2">Slow</p>
+              <p className="text-caption text-muted-foreground">Fashion</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Collections Philosophy */}
       <section className="section-padding bg-cream-dark">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={fabricStack}
+                  alt="Stack of naturally dyed fabrics showing color variations"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <p className="text-caption text-primary mb-4">Our Collections</p>
+              <h2 className="heading-section mb-8">
+                Each Collection
+                <br />
+                <span className="italic">Is a Chapter</span>
+              </h2>
+              
+              <div className="space-y-6 text-elegant text-muted-foreground">
+                <p>
+                  Our collections are developed slowly and intentionally, guided by concept, 
+                  material, and craft rather than trends. Every design begins with research — 
+                  into natural dye sources, fabric behaviour, cultural references, and form.
+                </p>
+                <p>
+                  Natural dyes play a defining role. Because colours are derived from plants 
+                  and traditional processes, no two dye lots are ever exactly the same. Subtle 
+                  variations in tone and texture are embraced as part of the design language.
+                </p>
+                <p>
+                  Collections are released in limited quantities, encouraging thoughtful 
+                  consumption and long-term wear rather than fast replacement.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section-padding">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -115,7 +169,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <p className="text-caption text-primary mb-4">Values</p>
-            <h2 className="heading-section">What I Believe</h2>
+            <h2 className="heading-section">What We Believe</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -126,7 +180,7 @@ const About = () => {
               },
               {
                 title: "Uniqueness",
-                description: "No two pieces are alike because no two leaves are alike. Your garment is yours alone, a singular work of art."
+                description: "No two pieces are alike because no two dye lots are alike. Your garment is yours alone, a singular work of art."
               },
               {
                 title: "Slow Craft",
@@ -139,8 +193,9 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center p-8 bg-cream-dark/50"
               >
+                <div className="w-12 h-px bg-primary mx-auto mb-6" />
                 <h3 className="heading-subsection mb-4">{value.title}</h3>
                 <p className="text-muted-foreground font-body leading-relaxed">{value.description}</p>
               </motion.div>
@@ -150,7 +205,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-cream-dark">
         <div className="container-narrow text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -160,7 +215,7 @@ const About = () => {
           >
             <h2 className="heading-section mb-6">Let's Connect</h2>
             <p className="text-elegant text-muted-foreground mb-10 max-w-xl mx-auto">
-              I love hearing from people who appreciate slow fashion and natural artistry. 
+              We love hearing from people who appreciate slow fashion and natural artistry. 
               Whether you have questions or want to discuss a custom piece, reach out.
             </p>
             <Button variant="botanical" size="lg" asChild>

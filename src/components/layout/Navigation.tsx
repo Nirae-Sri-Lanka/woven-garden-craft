@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="text-2xl font-display font-light tracking-wide text-foreground hover:text-primary transition-colors">
-            Botanical Threads
+            <span className="italic">Niraé</span>
           </Link>
 
           {/* Desktop Navigation */}
