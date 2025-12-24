@@ -16,9 +16,10 @@ const Index = () => {
       <GalleryPreview />
       
       {/* CTA Section */}
-      <section className="section-padding relative overflow-hidden">
+      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-cream to-cream-dark">
         {/* Decorative background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-terracotta/5 -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-sage/10 via-transparent to-terracotta/10 -z-10" />
+        <div className="absolute top-20 right-20 w-80 h-80 bg-primary/5 rounded-full blur-[80px]" />
         
         <div className="container-narrow text-center">
           <motion.div
@@ -27,18 +28,18 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-12 h-px bg-primary mx-auto mb-8" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-ochre mx-auto mb-10" />
             <p className="text-caption text-primary mb-4">Thank You</p>
-            <h2 className="heading-section mb-6">Supporting Slow Fashion</h2>
-            <p className="text-elegant text-muted-foreground max-w-xl mx-auto mb-4">
+            <h2 className="heading-section text-foreground mb-6">Supporting Slow Fashion</h2>
+            <p className="text-elegant text-foreground/75 max-w-xl mx-auto mb-4">
               When you choose natural dye, you choose clothing that respects the planet 
               and celebrates craftsmanship.
             </p>
-            <p className="text-lg font-display italic text-primary/80 max-w-lg mx-auto mb-10">
+            <p className="text-xl font-display font-medium italic text-primary max-w-lg mx-auto mb-12">
               For orders, custom enquiries, collaborations, or general questions — 
               feel free to reach out.
             </p>
-            <Button variant="botanical" size="lg" asChild>
+            <Button variant="botanical" size="lg" asChild className="shadow-glow">
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </motion.div>

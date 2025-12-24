@@ -15,7 +15,7 @@ const pieces = [
 
 const GalleryPreview = () => {
   return (
-    <section className="section-padding bg-cream-dark">
+    <section className="section-padding bg-background">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -26,15 +26,15 @@ const GalleryPreview = () => {
         >
           <div>
             <p className="text-caption text-primary mb-4">Collection</p>
-            <h2 className="heading-section">Wearable Nature</h2>
+            <h2 className="heading-section text-foreground">Wearable Nature</h2>
           </div>
-          <p className="text-elegant text-muted-foreground max-w-md">
+          <p className="text-elegant text-foreground/75 max-w-md">
             Each collection is a chapter, not a season. Our designs are developed slowly and 
             intentionally, guided by concept, material, and craft rather than trends.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-12">
           {pieces.map((piece, index) => (
             <motion.div
               key={piece.title}
@@ -44,16 +44,16 @@ const GalleryPreview = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="aspect-[3/4] overflow-hidden mb-4 relative">
+              <div className="aspect-[3/4] overflow-hidden mb-5 relative rounded-sm shadow-soft group-hover:shadow-elevated transition-shadow duration-500">
                 <img
                   src={piece.image}
                   alt={piece.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-earth/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-1">{piece.category}</p>
-              <h3 className="heading-subsection group-hover:text-primary transition-colors">{piece.title}</h3>
+              <p className="text-xs uppercase tracking-[0.25em] text-foreground/50 mb-2 font-semibold">{piece.category}</p>
+              <h3 className="heading-subsection text-foreground group-hover:text-primary transition-colors">{piece.title}</h3>
             </motion.div>
           ))}
         </div>
