@@ -7,70 +7,71 @@
 @layer base {
   :root {
     /* Warm cream background */
-    --background: 40 33% 96%;
-    --foreground: 25 20% 18%;
+    --background: 38 30% 94%;
+    --foreground: 20 35% 12%;
 
     /* Card surfaces - slightly warmer */
-    --card: 40 40% 98%;
-    --card-foreground: 25 20% 18%;
+    --card: 40 35% 97%;
+    --card-foreground: 20 35% 12%;
 
-    --popover: 40 40% 98%;
-    --popover-foreground: 25 20% 18%;
+    --popover: 40 35% 97%;
+    --popover-foreground: 20 35% 12%;
 
-    /* Terracotta primary */
-    --primary: 16 50% 48%;
-    --primary-foreground: 40 33% 96%;
+    /* Terracotta primary - deeper and richer */
+    --primary: 14 55% 42%;
+    --primary-foreground: 40 33% 98%;
 
     /* Sage green secondary */
-    --secondary: 120 15% 75%;
-    --secondary-foreground: 25 20% 18%;
+    --secondary: 120 18% 72%;
+    --secondary-foreground: 20 35% 12%;
 
-    /* Muted earth tones */
-    --muted: 35 20% 90%;
-    --muted-foreground: 25 10% 45%;
+    /* Muted earth tones - better contrast */
+    --muted: 35 22% 88%;
+    --muted-foreground: 20 20% 35%;
 
     /* Accent - warm rust */
-    --accent: 20 60% 42%;
-    --accent-foreground: 40 33% 96%;
+    --accent: 18 65% 38%;
+    --accent-foreground: 40 33% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 25% 85%;
-    --input: 35 25% 85%;
-    --ring: 16 50% 48%;
+    --border: 32 28% 82%;
+    --input: 32 28% 82%;
+    --ring: 14 55% 42%;
 
     --radius: 0.5rem;
 
-    /* Custom botanical colors */
-    --sage: 120 15% 60%;
-    --sage-light: 120 15% 85%;
-    --terracotta: 16 50% 48%;
-    --terracotta-light: 16 40% 75%;
-    --rust: 20 60% 35%;
-    --ochre: 40 55% 55%;
-    --cream: 40 33% 96%;
-    --cream-dark: 35 20% 90%;
-    --earth: 25 20% 25%;
-    --earth-light: 25 15% 40%;
+    /* Custom botanical colors - richer, more vibrant */
+    --sage: 120 18% 55%;
+    --sage-light: 120 20% 82%;
+    --terracotta: 14 55% 42%;
+    --terracotta-light: 14 45% 72%;
+    --rust: 18 65% 32%;
+    --ochre: 38 60% 50%;
+    --cream: 38 30% 94%;
+    --cream-dark: 35 25% 88%;
+    --earth: 20 35% 18%;
+    --earth-light: 20 18% 35%;
 
     /* Typography */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Cormorant Garamond', serif;
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(25 20% 18% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(25 20% 18% / 0.12);
+    /* Shadows - more dramatic */
+    --shadow-soft: 0 4px 24px -4px hsl(20 35% 12% / 0.1);
+    --shadow-elevated: 0 16px 48px -8px hsl(20 35% 12% / 0.15);
+    --shadow-glow: 0 0 60px -12px hsl(14 55% 42% / 0.25);
 
     /* Sidebar */
-    --sidebar-background: 40 33% 96%;
-    --sidebar-foreground: 25 20% 18%;
-    --sidebar-primary: 16 50% 48%;
-    --sidebar-primary-foreground: 40 33% 96%;
-    --sidebar-accent: 35 20% 90%;
-    --sidebar-accent-foreground: 25 20% 18%;
-    --sidebar-border: 35 25% 85%;
-    --sidebar-ring: 16 50% 48%;
+    --sidebar-background: 38 30% 94%;
+    --sidebar-foreground: 20 35% 12%;
+    --sidebar-primary: 14 55% 42%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 35 25% 88%;
+    --sidebar-accent-foreground: 20 35% 12%;
+    --sidebar-border: 32 28% 82%;
+    --sidebar-ring: 14 55% 42%;
   }
 
   .dark {
@@ -161,29 +162,32 @@
   }
 
   .heading-hero {
-    @apply text-5xl md:text-7xl lg:text-8xl font-light tracking-tight;
+    @apply text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight;
     font-family: var(--font-display);
     line-height: 1.05;
+    text-shadow: 0 2px 20px hsl(20 35% 12% / 0.08);
   }
 
   .heading-section {
-    @apply text-3xl md:text-4xl lg:text-5xl font-light;
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium;
     font-family: var(--font-display);
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
   }
 
   .heading-subsection {
-    @apply text-xl md:text-2xl font-normal;
+    @apply text-xl md:text-2xl font-semibold;
     font-family: var(--font-display);
   }
 
   .text-elegant {
-    @apply text-lg md:text-xl font-light leading-relaxed;
+    @apply text-lg md:text-xl font-normal leading-relaxed;
     font-family: var(--font-body);
+    letter-spacing: 0.01em;
   }
 
   .text-caption {
-    @apply text-sm uppercase tracking-[0.2em] font-medium;
+    @apply text-sm uppercase tracking-[0.25em] font-semibold;
     font-family: var(--font-body);
   }
 
