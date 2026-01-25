@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import ProcessPreview from "@/components/home/ProcessPreview";
 import Philosophy from "@/components/home/Philosophy";
 import GalleryPreview from "@/components/home/GalleryPreview";
+import VideoShowcase from "@/components/home/VideoShowcase";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
+      <VideoShowcase />
       <ProcessPreview />
       <Philosophy />
       <GalleryPreview />
