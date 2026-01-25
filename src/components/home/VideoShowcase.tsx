@@ -54,7 +54,7 @@ const VideoShowcase = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative lg:col-span-1"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-glow bg-foreground/5">
+          <div className="relative rounded-2xl overflow-hidden shadow-glow bg-foreground/10 border-2 border-dashed border-primary/30">
               <video
                 autoPlay
                 loop
@@ -68,7 +68,19 @@ const VideoShowcase = () => {
               </video>
               {/* Video overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent pointer-events-none" />
-              {/* Play indicator */}
+              {/* Video loading/missing indicator */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 text-center shadow-elegant">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                    <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p className="font-display font-semibold text-foreground text-lg">Video Player</p>
+                  <p className="text-sm text-foreground/70 mt-1">Upload 1000213615.mp4 to public/ folder</p>
+                </div>
+              </div>
+              {/* Bottom label */}
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4">
                   <p className="font-display font-semibold text-foreground">The Art of Natural Dyeing</p>
