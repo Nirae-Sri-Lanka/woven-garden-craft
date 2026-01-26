@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import dyeingProcess1 from "@/assets/dyeing-process-1.jpg";
 import dyeingProcess2 from "@/assets/dyeing-process-2.jpg";
+import fabricSamples from "@/assets/fabric-samples.jpg";
 
 const VideoShowcase = () => {
   return (
@@ -25,20 +26,20 @@ const VideoShowcase = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-center">
-          {/* Left Image */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* First Image */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-terracotta/20 rounded-2xl transform rotate-3 group-hover:rotate-1 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-terracotta/20 rounded-2xl transform rotate-2 group-hover:rotate-1 transition-transform duration-500" />
             <img
               src={dyeingProcess1}
               alt="Fabrics soaking in natural dye bath"
-              className="relative rounded-2xl shadow-elegant w-full aspect-[3/4] object-cover"
+              className="relative rounded-2xl shadow-elegant w-full aspect-[4/5] object-cover"
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
               <p className="font-display font-semibold text-foreground">Dye Bath</p>
@@ -46,49 +47,39 @@ const VideoShowcase = () => {
             </div>
           </motion.div>
 
-          {/* Center Video */}
+          {/* Center Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative group"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-ochre/20 to-sage/20 rounded-2xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500" />
+            <img
+              src={fabricSamples}
+              alt="Collection of naturally dyed fabric samples"
+              className="relative rounded-2xl shadow-elegant w-full aspect-[4/5] object-cover"
+            />
+            <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
+              <p className="font-display font-semibold text-foreground">Fabric Collection</p>
+              <p className="text-sm text-foreground/70">Curated natural textures</p>
+            </div>
+          </motion.div>
+
+          {/* Third Image */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative lg:col-span-1"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-glow">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full aspect-[9/16] object-cover"
-              >
-                <source src="/1000213615.mp4" type="video/mp4" />
-              </video>
-              {/* Elegant overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-foreground/10 pointer-events-none" />
-              {/* Bottom label */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-elegant">
-                  <p className="font-display font-semibold text-foreground text-lg">The Art of Natural Dyeing</p>
-                  <p className="text-sm text-foreground/70">Watch our process in action</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-sage/20 to-primary/20 rounded-2xl transform -rotate-3 group-hover:-rotate-1 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-sage/20 to-primary/20 rounded-2xl transform -rotate-2 group-hover:-rotate-1 transition-transform duration-500" />
             <img
               src={dyeingProcess2}
               alt="Naturally dyed pink and coral fabrics"
-              className="relative rounded-2xl shadow-elegant w-full aspect-[3/4] object-cover"
+              className="relative rounded-2xl shadow-elegant w-full aspect-[4/5] object-cover"
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
               <p className="font-display font-semibold text-foreground">Color Reveal</p>
