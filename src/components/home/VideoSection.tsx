@@ -22,8 +22,8 @@ const VideoSection = () => {
             <video
               autoPlay
               loop
-              muted
               playsInline
+              controls
               className="w-full aspect-video object-cover"
             >
               <source src="/1000213615.mp4" type="video/mp4" />
