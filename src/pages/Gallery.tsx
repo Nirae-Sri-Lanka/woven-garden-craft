@@ -1,57 +1,65 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout/Layout";
-import galleryKimono from "@/assets/gallery-kimono.jpg";
-import galleryScarf from "@/assets/gallery-scarf.jpg";
-import galleryDress from "@/assets/gallery-dress.jpg";
-import processReveal from "@/assets/process-reveal.jpg";
-import colorOutcomes from "@/assets/color-outcomes.jpg";
-import heroFabric from "@/assets/hero-fabric.jpg";
+import collectionVestBag from "@/assets/collection-vest-bag.jpg";
+import collectionEmbroidery from "@/assets/collection-embroidery.jpg";
+import collectionPinkDress from "@/assets/collection-pink-dress.jpg";
+import collectionSageDress from "@/assets/collection-sage-dress.jpg";
+import collectionCorsetDetail from "@/assets/collection-corset-detail.jpg";
+import collectionLaceDress from "@/assets/collection-lace-dress.jpg";
+import collectionEmbroideredTop from "@/assets/collection-embroidered-top.jpg";
 
-const categories = ["All", "Kimonos", "Dresses", "Scarves", "Fabrics"];
+const categories = ["All", "Dresses", "Tops", "Sets", "Details"];
 
 const galleryItems = [
   { 
     id: 1, 
-    image: galleryKimono, 
-    title: "Autumn Kimono", 
-    category: "Kimonos",
-    description: "Eucalyptus and fern prints on silk" 
+    image: collectionVestBag, 
+    title: "Botanical Vest Set", 
+    category: "Sets",
+    description: "Eco-printed vest with matching botanical handbag" 
   },
   { 
     id: 2, 
-    image: galleryScarf, 
-    title: "Eucalyptus Silk Scarf", 
-    category: "Scarves",
-    description: "Rust tones from silver dollar eucalyptus" 
+    image: collectionEmbroidery, 
+    title: "Eco-Print Embroidery Detail", 
+    category: "Details",
+    description: "Delicate leaf prints on embroidered cotton" 
   },
   { 
     id: 3, 
-    image: galleryDress, 
-    title: "Garden Sundress", 
+    image: collectionPinkDress, 
+    title: "Rose Corset Dress", 
     category: "Dresses",
-    description: "Botanical prints on natural linen" 
+    description: "Botanical printed corset dress in soft rose" 
   },
   { 
     id: 4, 
-    image: processReveal, 
-    title: "Maple Silk Panel", 
-    category: "Fabrics",
-    description: "One-of-a-kind printed fabric" 
+    image: collectionSageDress, 
+    title: "Sage Garden Dress", 
+    category: "Dresses",
+    description: "Natural dyed sage with stone bead straps" 
   },
   { 
     id: 5, 
-    image: colorOutcomes, 
-    title: "Color Study Collection", 
-    category: "Fabrics",
-    description: "Exploring nature's palette" 
+    image: collectionCorsetDetail, 
+    title: "Floral Corset Detail", 
+    category: "Details",
+    description: "Hand-stitched corset with botanical embroidery" 
   },
   { 
     id: 6, 
-    image: heroFabric, 
-    title: "Sage & Terracotta Wrap", 
-    category: "Scarves",
-    description: "Multi-botanical blend" 
+    image: collectionLaceDress, 
+    title: "Ivory Lace Dress", 
+    category: "Dresses",
+    description: "Eco-printed lace with subtle botanical accents" 
+  },
+  { 
+    id: 7, 
+    image: collectionEmbroideredTop, 
+    title: "Embroidered Blouse", 
+    category: "Tops",
+    description: "Traditional embroidery meets eco-printing" 
   },
 ];
 
@@ -126,7 +134,7 @@ const Gallery = () => {
                   className="group cursor-pointer"
                   onClick={() => setSelectedItem(item)}
                 >
-                  <div className="aspect-[3/4] overflow-hidden mb-4 relative">
+                  <div className="aspect-[3/4] overflow-hidden mb-4 relative rounded-sm shadow-soft">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -165,7 +173,7 @@ const Gallery = () => {
               className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-elegant">
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.title}
