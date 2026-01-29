@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
 
 const socialLinks = [
-  { name: "Instagram", url: "https://instagram.com/niraedesigns", icon: Instagram },
-  { name: "Facebook", url: "https://facebook.com/niraedesigns", icon: Facebook },
-  { name: "TikTok", url: "https://tiktok.com/@niraedesigns", icon: MessageCircle },
-  { name: "YouTube", url: "https://youtube.com/@niraedesigns", icon: Youtube },
+  { name: "Instagram", url: "https://www.instagram.com/_nirae_designs/", icon: Instagram },
+  // { name: "Facebook", url: "https://facebook.com/niraedesigns", icon: Facebook },
+  { name: "TikTok", url: "https://www.tiktok.com/@nirae.official", icon: MessageCircle },
+  // { name: "YouTube", url: "https://youtube.com/@niraedesigns", icon: Youtube },
 ];
 
 const Contact = () => {
