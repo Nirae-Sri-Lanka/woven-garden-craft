@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import dyeingProcess1 from "@/assets/dyeing-process-1.jpg";
 import dyeingProcess2 from "@/assets/dyeing-process-2.jpg";
-import fabricSamples from "@/assets/fabric-samples.jpg";
+import fabricCollectionNew from "@/assets/fabric-collection-new.jpg";
 
 const VideoShowcase = () => {
   return (
@@ -57,7 +57,7 @@ const VideoShowcase = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-ochre/20 to-sage/20 rounded-2xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500" />
             <img
-              src={fabricSamples}
+              src={fabricCollectionNew}
               alt="Collection of naturally dyed fabric samples"
               className="relative rounded-2xl shadow-elegant w-full aspect-[4/5] object-cover"
             />
