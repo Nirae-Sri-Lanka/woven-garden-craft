@@ -1,16 +1,22 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import galleryKimono from "@/assets/gallery-kimono.jpg";
-import galleryScarf from "@/assets/gallery-scarf.jpg";
-import galleryDress from "@/assets/gallery-dress.jpg";
-import fabricStack from "@/assets/fabric-stack.jpg";
+import collectionVestBag from "@/assets/collection-vest-bag.jpg";
+import collectionEmbroidery from "@/assets/collection-embroidery.jpg";
+import collectionPinkDress from "@/assets/collection-pink-dress.jpg";
+import collectionSageDress from "@/assets/collection-sage-dress.jpg";
+import collectionCorsetDetail from "@/assets/collection-corset-detail.jpg";
+import collectionLaceDress from "@/assets/collection-lace-dress.jpg";
+import collectionEmbroideredTop from "@/assets/collection-embroidered-top.jpg";
 
 const pieces = [
-  { image: galleryKimono, title: "Botanical Kimono", category: "Outerwear" },
-  { image: galleryScarf, title: "Eucalyptus Scarf", category: "Accessories" },
-  { image: galleryDress, title: "Garden Dress", category: "Dresses" },
-  { image: fabricStack, title: "Layered Textures", category: "Collection" },
+  { image: collectionVestBag, title: "Botanical Vest Set", category: "Sets" },
+  { image: collectionEmbroidery, title: "Eco-Print Detail", category: "Details" },
+  { image: collectionPinkDress, title: "Rose Corset Dress", category: "Dresses" },
+  { image: collectionSageDress, title: "Sage Garden Dress", category: "Dresses" },
+  { image: collectionCorsetDetail, title: "Floral Corset", category: "Details" },
+  { image: collectionLaceDress, title: "Ivory Lace Dress", category: "Dresses" },
+  { image: collectionEmbroideredTop, title: "Embroidered Blouse", category: "Tops" },
 ];
 
 const GalleryPreview = () => {
@@ -34,14 +40,14 @@ const GalleryPreview = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {pieces.map((piece, index) => (
             <motion.div
               key={piece.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
               className="group cursor-pointer"
             >
               <div className="aspect-[3/4] overflow-hidden mb-5 relative rounded-sm shadow-soft group-hover:shadow-elevated transition-shadow duration-500">
