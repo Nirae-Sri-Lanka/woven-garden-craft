@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import fabricMordant from "@/assets/fabric-mordant.jpg";
 import fabricDyeing from "@/assets/fabric-dyeing.jpg";
 import fabricStack from "@/assets/fabric-stack.jpg";
-import fabricSamples from "@/assets/fabric-samples.jpg";
+import processCreating from "@/assets/process-creating.jpg";
 
 const steps = [
   { image: fabricMordant, title: "Mordanting", description: "Preparing fabric with natural fixatives" },
   { image: fabricDyeing, title: "Natural Dyeing", description: "Extracting colour from plants" },
   { image: fabricStack, title: "Finishing", description: "Washing and curing the fabric" },
-  { image: fabricSamples, title: "Creating", description: "Transforming into wearable art" },
+  { image: processCreating, title: "Creating", description: "Transforming into wearable art" },
 ];
 
 const ProcessPreview = () => {
