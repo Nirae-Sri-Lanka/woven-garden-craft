@@ -57,7 +57,7 @@ const VideoShowcase = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-ochre/20 to-sage/20 rounded-2xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500" />
             <img
-              src={fabricSamples}
+              src={fabricCollectionNew}
               alt="Collection of naturally dyed fabric samples"
               className="relative rounded-2xl shadow-elegant w-full aspect-[4/5] object-cover"
             />
